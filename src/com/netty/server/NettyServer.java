@@ -61,6 +61,7 @@ public class NettyServer {
 				ByteBuf buf = Unpooled.copiedBuffer("$_".getBytes());//拆包粘包定义结束字符串（第一种解决方案）  
                 sc.pipeline().addLast(new DelimiterBasedFrameDecoder(1024,buf));//在管道中加入结束字符串  
             //  sc.pipeline().addLast(new FixedLengthFrameDecoder(200));第二种定长  
+                //字符串解码
                 sc.pipeline().addLast(new StringDecoder());//定义接收类型为字符串把ByteBuf转成String  
               sc.pipeline().addLast(new ServertHandler());//在这里配置具体数据接收方法的处理  
               //sc.pipeline().addLast(new ResponseServerHandler());
