@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.7"/>
+	<classpathentry kind="lib" path="libs/netty-all-5.0.0.Alpha1.jar" sourcepath="C:/Users/Administrator/Desktop/netty-5.0.0.Alpha1/netty-5.0.0.Alpha1/jar/all-in-one/netty-all-5.0.0.Alpha1-sources.jar"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>
