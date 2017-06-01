@@ -34,7 +34,7 @@ public DiscardClientHandler(Object msg){
         ctx.writeAndFlush(msg);
     }
     
-    public void channelInactive(ChannelHandlerContext ctx)throws Exception{//连接断开时调用?
+    public void channelInactive(ChannelHandlerContext ctx)throws Exception{//连接断开时调用。
     	System.out.println("----  Client Channel Inactive/Connection Close ----");
     	ctx.channel().close();
     }
@@ -47,7 +47,7 @@ public DiscardClientHandler(Object msg){
     }
 
     @Override
-    public void exceptionCaught(ChannelHandlerContext ctx, Throwable cause) throws Exception {
+    public void exceptionCaught(ChannelHandlerContext ctx, Throwable cause) throws Exception {//发生异常后调用
         ctx.close();
     }
 

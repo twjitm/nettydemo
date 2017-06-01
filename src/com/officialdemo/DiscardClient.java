@@ -65,8 +65,8 @@ public class DiscardClient {
 
     public static void main(String[] args) throws Exception {
 //        new DiscardClient("127.0.0.1", 8089, 256).run();
-         User u = new User();
-         u.setUsername("lao wan");
-         new DiscardClient("127.0.0.1", 8089, u).run();
+         User user= new User();
+         user.setUsername("https://twjitm.github.io");
+         new DiscardClient("127.0.0.1", 8089, user).run();
     }
 }
