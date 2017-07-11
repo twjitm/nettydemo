@@ -1,0 +1,29 @@
+package com.nettys.serializable;
+
+import java.io.ByteArrayOutputStream;
+import java.io.IOException;
+import java.io.ObjectOutputStream;
+
+/**
+ * Created by Administrator on 2017/7/11.
+ */
+public class Test {
+    public static void main(String[] args) {
+        User user = new User();
+        user.setId(23);
+        user.setName("唐文江");
+        ByteArrayOutputStream bos = new ByteArrayOutputStream();
+        try {
+            ObjectOutputStream out = new ObjectOutputStream(bos);
+            out.writeObject(bos);
+            out.flush();
+            out.close();
+            byte[] bytes = bos.toByteArray();
+            bos.close();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+    }
+
+}
